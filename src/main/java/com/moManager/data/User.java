@@ -8,8 +8,12 @@ import javax.persistence.Id;
 public class User {
 
     private @Id @GeneratedValue Long id;
+
     private String firstName;
+
     private String lastName;
+
+    private String userName;
 
     private User() {}
 
@@ -40,5 +44,13 @@ public class User {
 
     public void setLastName(String lastName) {
         this.lastName = lastName;
+    }
+
+    public String getUserName(){
+        return userName;
+    }
+
+    public void setUserName(){
+        this.userName = userName;
     }
 }
