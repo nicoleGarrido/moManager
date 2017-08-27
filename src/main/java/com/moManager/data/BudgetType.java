@@ -6,17 +6,17 @@ import javax.persistence.Id;
 @Entity
 public class BudgetType {
 
-    private @Id String type;
+    private @Id BudgetType type;
 
-    public BudgetType(String type){
+    public BudgetType(BudgetType type){
         this.type = type;
     }
 
-    public String getType(){
+    public BudgetType getType(){
         return type;
     }
 
-    public void setType(String type){
+    public void setType(BudgetType type){
         this.type = type;
     }
 }

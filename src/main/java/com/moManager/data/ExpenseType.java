@@ -6,17 +6,17 @@ import javax.persistence.Id;
 @Entity
 public class ExpenseType {
 
-    private @Id String type;
+    private @Id ExpenseType type;
 
-    public ExpenseType(String type){
+    public ExpenseType(ExpenseType type){
         this.type = type;
     }
 
-    public String getType() {
+    public ExpenseType getType() {
         return type;
     }
 
-    public void setType(String type) {
+    public void setType(ExpenseType type) {
         this.type = type;
     }
 
