@@ -1,6 +1,4 @@
 package com.moManager.data;
-
-
 public class ExpenseType {
 
     private String type;
