@@ -1,7 +1,12 @@
 package com.moManager.data;
+
+import javax.persistence.Entity;
+import javax.persistence.Id;
+
+@Entity
 public class ExpenseType {
 
-    private String type;
+    private @Id String type;
 
     public ExpenseType(String type){
         this.type = type;
@@ -14,4 +19,5 @@ public class ExpenseType {
     public void setType(String type) {
         this.type = type;
     }
+
 }

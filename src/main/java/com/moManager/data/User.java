@@ -15,8 +15,6 @@ public class User {
 
     private String userName;
 
-    private User() {}
-
     public User(String firstName, String lastName) {
         this.firstName = firstName;
         this.lastName = lastName;
@@ -53,4 +51,5 @@ public class User {
     public void setUserName(){
         this.userName = userName;
     }
+
 }

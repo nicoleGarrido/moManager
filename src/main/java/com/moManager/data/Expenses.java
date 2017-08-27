@@ -1,13 +1,19 @@
 package com.moManager.data;
 
+import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import java.util.Date;
 
+@Entity
 public class Expenses {
+
     private @Id @GeneratedValue Long id;
+
     private String type;
+
     private Long amount;
+
     private Date date;
 
     public Expenses (String type, Long amount, Date date) {
@@ -47,4 +53,5 @@ public class Expenses {
     public void setDate(Date date) {
         this.date = date;
     }
+
 }

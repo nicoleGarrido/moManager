@@ -1,17 +1,20 @@
 package com.moManager.data;
 
-import org.hibernate.type.SetType;
-
+import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import java.util.Date;
 
+@Entity
 public class Budget {
-    private @Id @GeneratedValue Long id;
-    private String type;
-    private Long amount;
-    private Date date;
 
+    private @Id @GeneratedValue Long id;
+
+    private String type;
+
+    private Long amount;
+
+    private Date date;
 
     public Budget(String type, Long amount,Date date ){
         this.type = type;
@@ -50,4 +53,5 @@ public class Budget {
     public void setDate(Date date) {
         this.date = date;
     }
+
 }
