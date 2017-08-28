@@ -3,6 +3,7 @@ package com.moManager.data;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
 import java.util.Date;
 
 @Entity
@@ -10,13 +11,14 @@ public class Budget {
 
     private @Id @GeneratedValue Long id;
 
-    private String type;
+    @ManyToOne
+    private BudgetType type;
 
     private Long amount;
 
     private Date date;
 
-    public Budget(String type, Long amount,Date date ){
+    public Budget(BudgetType type, Long amount,Date date ){
         this.type = type;
         this.amount = amount;
         this.date = date;
@@ -30,11 +32,11 @@ public class Budget {
         this.id = id;
     }
 
-    public String getType() {
+    public BudgetType getType() {
         return type;
     }
 
-    public void  SetType(String type) {
+    public void  SetType(BudgetType type) {
         this.type = type;
     }
 
